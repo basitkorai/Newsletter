@@ -1,0 +1,24 @@
+@media screen and (min-width: 735px) {
+
+  main {
+    border-radius: 1.5rem;
+  }
+  
+  .newsletter-section {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .newsletter {
+      padding: 4rem 2.5rem;
+      grid-column: 1/2;
+      grid-row: 1/1;
+    }
+
+    .hero {
+      grid-column: 2/3;
+      grid-row: 1/1;
+      margin: 1.5rem;
+    }
+  }
+}

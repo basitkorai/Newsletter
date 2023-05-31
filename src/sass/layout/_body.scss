@@ -1,0 +1,33 @@
+@use '../utilities/' as u;
+
+body {
+    font-family: u.$font-family;
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+main {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    height: auto;
+}
+
+main::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+
+@media screen and (min-width: 400px) {
+    body {
+        background-color: u.$clr-primary-600;
+    }
+
+    main {
+        color: u.$clr-primary-600;
+    }
+}

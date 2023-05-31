@@ -1,0 +1,25 @@
+@use "../utilities" as u;
+
+.btn {
+  display: block;
+  padding: 0.9rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: u.$clr-primary-600;
+  color: u.$clr-white;
+  font-weight: u.$fw-bold;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: u.$clr-tomato;
+}
+
+.btn:active {
+  transform: scale(0.99) translateY(6px);
+}
+
+.btn:focus {
+  border: 2px solid whitesmoke;
+}

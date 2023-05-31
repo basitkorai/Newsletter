@@ -1,0 +1,84 @@
+@use "../utilities" as u;
+
+
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: u.$clr-primary-600;
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+    inset: 0;
+    transition: all 0.3s ease-in-out;
+    transform: translate(100vw);
+
+}
+
+.show-success {
+    opacity: 1;
+    z-index: 1;
+    transform: translate(0);
+}
+
+.success {
+  padding-inline: 1.5rem;
+  height: 100vh;
+  line-height: 1.2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  max-width: u.rem(504);
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 10rem;
+  }
+
+  &__img-container {
+    width: u.rem(60);
+  }
+
+  &__heading {
+    font-size: 2.1rem;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 2.5rem;
+    width: calc(100% - 3rem);
+    padding: 1.1rem;
+    margin-inline: auto;
+  }
+
+  @media screen and (min-width: 504px) {
+    height: auto;
+    padding: 4rem;
+    line-height: 1.5;
+    border-radius: 2rem;
+
+    &__heading {
+      font-size: 3.2rem;
+      line-height: 1;
+    }
+
+    &__container {
+      margin-bottom: 3rem;
+    }
+
+    .btn,
+    .btn:focus {
+      position: static;
+      width: 100%;
+      margin: 0;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use "../utilities" as u;
+
+.newsletter-section {
+  background-color: u.$clr-white;
+  max-width: 400px;
+  margin-inline: auto;
+
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.3s;
+
+  .newsletter {
+    padding: 1.5rem 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__form {
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 0.3rem;
+
+      .label-email {
+        font-size: small;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+
+        .error {
+          color: u.$clr-tomato;
+          opacity: 0;
+          transition: 300ms;
+        }
+
+        .show-error {
+          opacity: 1;
+        }
+      }
+
+      .input-email {
+        display: block;
+        width: 100%;
+        padding: 0.9rem 0.7rem;
+        border-radius: 0.5rem;
+        border: 1px solid u.$clr-primary-300;
+        outline: none;
+      }
+
+      .invalid-email {
+        color: u.$clr-tomato;
+        border-color: u.$clr-tomato;
+        background: hsla(4, 100%, 67%, 20%);
+        font-weight: bold;
+      }
+
+      .input-email:focus-visible {
+        border: 1px solid u.$clr-primary-400;
+      }
+
+      .btn {
+        margin-top: 0.7rem;
+      }
+    }
+  }
+}
