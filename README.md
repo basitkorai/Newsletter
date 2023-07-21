@@ -69,7 +69,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [basitkorai.com](https://basitkorai.netlify.app)
+- Checkout my portfolio Website - [basitkorai.netlify.app](https://basitkorai.netlify.app)
 - Frontend Mentor - [@basit-flash](https://www.frontendmentor.io/profile/basit-flash)
 - Twitter - [@basitxkorai](https://www.twitter.com/basitxkorai)
 
