@@ -1,5 +1,5 @@
 const emailInput = document.querySelector("#email");
-const submit = document.querySelector("#form > .btn");
+const form = document.querySelector("#form");
 const newsletter = document.querySelector("#newsletter");
 const successPopup = document.querySelector("#success");
 const errorMessage = document.querySelector("#error");
@@ -17,7 +17,8 @@ emailInput.addEventListener("keyup", () => {
   }
 });
 
-submit.addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   const email = emailInput.value;
   if (regEx.test(email)) {
