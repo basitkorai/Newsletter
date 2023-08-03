@@ -296,8 +296,4 @@ main::-webkit-scrollbar { /* WebKit */
   border: 2px solid whitesmoke;
 }
 
-main {
-  overflow: scroll;
-}
-
 /*# sourceMappingURL=main.css.map */

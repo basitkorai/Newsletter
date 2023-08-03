@@ -5,23 +5,20 @@ const successPopup = document.querySelector("#success");
 const errorMessage = document.querySelector("#error");
 const dismissBtn = document.querySelector("#close-btn");
 let enteredEmail = document.querySelector(".entered-email");
+const emailValue = emailInput.value;
 
 emailInput.addEventListener("keyup", () => {
-  if (emailInput.value == "") {
-    removeErrors();
-  }
   const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  const email = emailInput.value;
-  if (regEx.test(email)) {
+  if (emailValue == "" || regEx.test(emailValue)) {
     removeErrors();
   }
+
 });
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  const email = emailInput.value;
-  if (regEx.test(email)) {
+  if (regEx.test(emailValue)) {
     removeErrors();
     dynamicEmail();
 
