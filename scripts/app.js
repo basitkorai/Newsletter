@@ -17,10 +17,11 @@ emailInput.addEventListener("keyup", () => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  const emailValue = emailInput.value;
   const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   if (regEx.test(emailValue)) {
     removeErrors();
-    dynamicEmail();
+    enteredEmail.textContent = emailInput.value;
 
     successPopup.classList.add("show-success");
   } else {
@@ -30,7 +31,6 @@ form.addEventListener("submit", (e) => {
 
 dismissBtn.addEventListener("click", () => {
   emailInput.value = "";
-  removeErrors();
   successPopup.classList.remove("show-success");
 });
 
@@ -43,8 +43,4 @@ function addErrors() {
 function removeErrors() {
   errorMessage.classList.remove("show-error");
   emailInput.classList.remove("invalid-email");
-}
-
-function dynamicEmail() {
-  enteredEmail.textContent = emailInput.value;
 }
